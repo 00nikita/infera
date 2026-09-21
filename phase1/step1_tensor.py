@@ -1,12 +1,12 @@
 import torch
 
-a = torch.tensor([1, 2, 3])
-b = torch.tensor([4, 5, 6])
-c = a + b
+print("\n--- Memory experiment ---")
 
-print("a:", a)
-print("b:", b)
-print("c:", c)
-print("Shape:", c.shape)
-print("Dtype:", c.dtype)
-print("Device:", c.device)
+x = torch.randn(1000, 1000)
+
+print("Shape:", x.shape)
+print("Dtype:", x.dtype)
+print("Elements:", x.numel())
+print("Bytes per element:", x.element_size())
+print("Total bytes:", x.numel() * x.element_size())
+print("Total MB:", (x.numel() * x.element_size()) / (1024 ** 2))
