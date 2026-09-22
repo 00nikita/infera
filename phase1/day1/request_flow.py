@@ -14,6 +14,9 @@ def producer(job):
 def worker():
     while True:
         job = job_queue.get()
+        if job == "STOP":
+            job_queue.task_done()
+            break
         process_job(job)
         job_queue.task_done()
 
@@ -23,5 +26,6 @@ for _ in range(workers):
 
 for i in range(5):
     producer(i)
+for i in range(4):
+    producer("STOP")
 job_queue.join()
-
