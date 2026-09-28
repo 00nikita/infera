@@ -212,5 +212,3 @@ This structure will evolve as new phases and components are implemented.
 ## Status
 
 🚧 **In active development**
-
-Currently working on **Phase 1: Inference Foundations**.
