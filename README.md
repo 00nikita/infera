@@ -1,4 +1,4 @@
-# Inferra
+Inferra
 
 **An inference engineering platform built from first principles.**
 
